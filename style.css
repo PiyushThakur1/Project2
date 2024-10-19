@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 html, body {
@@ -12,26 +13,99 @@ html, body {
 #main {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column; /* Allows the layout to stack elements vertically */
     background-color: white;
-    
 }
-#nav{
+
+#nav {
     height: 100px;
     width: 100%;
-    background-color: red;
-    display: flex;/*it is used so that our tags are one after another in our websites*/
-    align-items: center;
+    display: flex; /* Ensures navigation items are aligned */
+    align-items: center; /* Centers items vertically */
     justify-content: flex-end;
     gap: 20px;
     padding: 0 30px;
 }
-#nav h4{
+
+#nav h4 {
     font-size: 20px;
+    font-weight: 600;
 }
-#nav i{
+
+#nav i {
     background-color: black;
     color: white;
     font-size: 20px;
     padding: 20px;
+    font-weight: 500;
     border-radius: 50px;
+}
+
+#center {
+    flex-grow: 1; /* Allows the center section to take up available space */
+    width: 100%;
+    padding: 40px 80px;
+}
+
+#center h1 {
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 85px; /* Adjusts line height */
+}
+
+#center-in {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    display: flex; /* Stacks elements horizontally */
+    justify-content: space-between; /* Spaces elements evenly */
+}
+
+#right {
+    width: 20%;
+}
+
+#center-in p {
+    height: 200px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.elem {
+    padding: 16px 0;
+    border-top: 3px solid #000; /* Adds a top border */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.elem i {
+    font-size: 25px;
+    font-weight: 400;
+    opacity: 0;
+}
+
+.elem a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.elem:hover i {
+    opacity: 1;
+}
+
+.elem:hover a {
+    text-decoration: underline;
+}
+
+#bottom {
+    height: 35%;
+    width: 100%;
+    background-color: red;
+    background-image: url(https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: 0 40%;
 }
